@@ -8,8 +8,8 @@ function AddtoCart() {
   const Total = useSelector((state) => state.TotalCartPrice);
 
   return (
-    <div>
-      <div className="container my-[100px] border  flex flex-col gap-6 overflow-x-auto ">
+    <div className="dark:bg-gray-900 dark:text-white ">
+      <div className="container py-[100px] border dark:border-white  flex flex-col gap-6 overflow-x-auto ">
         {CartItems.map((value) => (
           <CartProductCard value={value} key={value.id} />
         ))}

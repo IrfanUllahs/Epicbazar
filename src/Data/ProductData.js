@@ -1,4 +1,4 @@
-const ProductsData = [
+const ProductData = [
   {
     id: 1,
     images: [
@@ -268,7 +268,6 @@ const ProductsData = [
     updatedAt: "2024-02-09T19:41:51.000Z",
     aosDelay: "0", // Added default aosDelay
   },
-
   // elctronic data start from here
   {
     id: 10,
@@ -943,5 +942,4 @@ const ProductsData = [
     },
   },
 ];
-
-export default ProductsData;
+export default ProductData;

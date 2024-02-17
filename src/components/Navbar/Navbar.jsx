@@ -4,6 +4,8 @@ import logo from "/images/logo.png";
 import { FaCartShopping } from "react-icons/fa6";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
+import { RiMenu3Fill } from "react-icons/ri";
+import { FaSearch } from "react-icons/fa";
 
 import { FaCaretDown } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
@@ -15,6 +17,8 @@ export default function Navbar() {
     const storedTheme = localStorage.getItem("themeMode");
     return storedTheme ? storedTheme === "light" : true;
   });
+  const [isClicked, setisClicked] = useState(true);
+
   useEffect(() => {
     localStorage.setItem("themeMode", themomde ? "light" : "dark");
     const html = document.querySelector("html");
@@ -30,7 +34,7 @@ export default function Navbar() {
     {
       id: 2,
       name: "Clothes",
-      link: "/Clothes",
+      link: "/clothes",
     },
 
     {
@@ -56,6 +60,7 @@ export default function Navbar() {
       link: "/#",
     },
   ];
+  const [isDisplay, setisDisplay] = useState(false);
   return (
     <>
       <div className="shadow-md dark:bg-gray-900 dark:text-white  dark:shadow-black duration-200 relative z-40">
@@ -67,36 +72,37 @@ export default function Navbar() {
               <img src={logo} className="w-10" />
               <span className="text-black">EpicBazaar</span>
             </Link>
-            {/* right portion  */}
-            <div className=" flex gap-4 items-center">
-              {/* search bar here  */}
+            {/* search bar here  */}
+
+            <div
+              className=" border border-gray-300 rounded-full px-[10px] py-[4px] sm:w-[200px] w-[40px] focus:outline focus:border-secondary sm:hover:w-[300px] hover:w-[250px]	duration-500 ease-in-out  bg-white
+                dark:bg-black absolute right-[50px] sm:right-[215px]  md:right-[300px] cursor-pointer  group "
+            >
               <input
-                className="border border-gray-300 rounded-full px-[10px] py-[4px] w-[200px] focus:outline-secondary hover:w-[300px]	duration-500 ease-in-out hover:placeholder:text-secondary
-                dark:bg-black
-                "
-                type="text"
-                placeholder="Search"
+                placeholder="search "
+                className="w-full h-full border-none focus:border-none focus:outline-none group-hover:text-secondary bg-white dark:bg-black sm:inline-block hidden  group-hover:inline-block "
               />
+              <FaSearch className="sm:hidden group-hover:hidden" />
+            </div>
+            {/* right portion  */}
+            <div className=" flex gap-4 items-center relative  ">
               {/* cart button is here */}
-              <Link to="/cart">
-                <div className="bg-secondary rounded-full py-[5px] px-[22px] flex justify-center items-center gap-2 text-white text-[15px] group cursor-pointer ">
-                  <p className="group-hover:block hidden text-[16px] duration-500 ease-in-out">
-                    Order
-                  </p>
+              <Link to="/cart ">
+                <div className="bg-secondary hidden rounded-full py-[8px] px-[22px] sm:flex justify-center items-center gap-2 text-white text-[15px] group cursor-pointer ">
                   <div
                     className="flex
                    items-center justify-center relative"
                   >
                     <FaCartShopping />
-                    <p className="absolute -top-2 bottom-0 left-[105%] text-red-950 text-[16px] rounded-full">
-                      {count ? count : ""}
+                    <p className="absolute -top-3 bottom-0 left-[105%] text-red-950 text-[16px] rounded-full">
+                      {count}
                     </p>
                   </div>
                 </div>
               </Link>
               {/* dark mode button is here */}
               <div
-                className="hover:bg-slate-500 rounded-sm p-1 group dark-hover:bg-blue-400"
+                className="hover:bg-slate-500 sm:block hidden rounded-sm p-1 group dark-hover:bg-blue-400  "
                 onClick={() => setThemomde((preValue) => !preValue)}
               >
                 {themomde ? (
@@ -104,6 +110,62 @@ export default function Navbar() {
                 ) : (
                   <MdDarkMode className="text-[22px] cursor-pointer text-blue-400  " />
                 )}
+              </div>
+
+              {/* this is the code for responsiv nev bar */}
+              <RiMenu3Fill
+                className={`sm:hidden text-xl duration-500 ${
+                  isDisplay ? "-rotate-90 " : ""
+                }`}
+                onClick={() => setisDisplay((prev) => !prev)}
+              />
+              <div
+                className={`w-[320px] border rounded-b-[20px] rounded-bl-[20px] h-[200px] z-50 absolute duration-500 sm:hidden top-[40px]  bg-black -right-5   justify-center ${
+                  isDisplay ? "-right-5" : "-right-[340px]"
+                } 
+               
+               `}
+              >
+                {/* // this is shoping cart code  */}
+                <Link to="/cart ">
+                  <div className="bg-secondary  rounded-full py-[8px] px-[22px] sm:flex justify-center items-center gap-2 text-white text-[15px] group cursor-pointer mx-auto  w-[80%] my-6">
+                    <div
+                      className="flex
+                   items-center justify-center relative gap-4"
+                    >
+                      <p>Shoping Cart</p>
+                      <FaCartShopping />
+                      <p className="absolute -top-2 bottom-0 left-[78%] text-red-950 text-[16px] rounded-full">
+                        {count}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+                {/* dark mode button is here */}
+                <div
+                  className="bg-secondary  rounded-full py-[8px] px-[22px] sm:flex justify-center items-center gap-2 text-white text-[15px] group cursor-pointer mx-auto  w-[80%] "
+                  onClick={() => setThemomde((preValue) => !preValue)}
+                >
+                  {themomde ? (
+                    <div
+                      className="flex gap-2 items-center justify-center
+
+                    "
+                    >
+                      <div>Light Mode</div>
+
+                      <MdLightMode className=" text-[22px] cursor-pointer text-white  " />
+                    </div>
+                  ) : (
+                    <div
+                      className="flex gap-2  items-center justify-center
+                    "
+                    >
+                      <div>Dark Mode</div>
+                      <MdDarkMode className="text-[22px] cursor-pointer text-blue-400  " />
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -114,14 +176,15 @@ export default function Navbar() {
             <ul
               className="flex justify-center gap-[30px] items-center "
               data-aos="zoom-in"
-              data-aos-duration="1000"
             >
               {Menu.map((value) => (
                 <li key={value.id} className="py-3 ">
                   <NavLink
                     to={value.link}
                     className={({ isActive }) =>
-                      `${isActive ? "text-secondary" : ""} hover:text-secondary`
+                      `${
+                        isActive ? "text-secondary" : ""
+                      } hover:text-secondary text-[19px] font-semibold`
                     }
                   >
                     {value.name}
@@ -129,7 +192,7 @@ export default function Navbar() {
                 </li>
               ))}
               {/* Here is the section for dropDown Menu */}
-              <li className="group relative ">
+              {/* <li className="group relative ">
                 <a
                   className="flex
                  items-center gap-[10] "
@@ -153,7 +216,7 @@ export default function Navbar() {
                     ))}
                   </ul>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

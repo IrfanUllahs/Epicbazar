@@ -62,9 +62,6 @@ function HeroSection() {
                     <h1
                       className="text-3xl sm:text-6xl lg:text-7xl font-bold "
                       data-aos="zoom-out"
-                      data-aos-duration="1000"
-                      data-aos-once="true"
-                      data-aos-delay="200"
                     >
                       {value.title}
                     </h1>

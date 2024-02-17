@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import ProductsData from "../ProductsData";
+import ProductsData from "../../Data/ProductData";
 import { FaStar } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -14,12 +14,11 @@ import "react-image-gallery/styles/css/image-gallery.css"; // Import CSS file
 
 export default function ProductDetails() {
   const { id } = useParams();
-
+  const CartItems = useSelector((state) => state.CartItems);
   const Product = ProductsData.find((item) => item.id == id);
   const dispatch = useDispatch();
-  const CartItems = useSelector((state) => state.CartItems);
   const images = Product.images;
-  console.log(images);
+
   const AddtoCartMethod = () => {
     const isPresent = CartItems.find((item) => (item.id == id ? true : false));
     if (isPresent) {
@@ -45,7 +44,7 @@ export default function ProductDetails() {
       md:gap-[50px] gap-[30px]"
       >
         {/* This is Image Section  */}
-        <div className=" overflow-hidden     sm:h-full ">
+        <div className=" overflow-hidden     sm:h-[95%]  lg:w-2/3 w-full ">
           {/* <img src={Product.images[0].original} /> */}
           <ImageGallery
             items={images}
