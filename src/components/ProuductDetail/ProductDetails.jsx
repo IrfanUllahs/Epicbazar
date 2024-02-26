@@ -8,10 +8,30 @@ import {
   addingCartcount,
   TotalPriceOfCart,
 } from "../features/addtoCart/AddtoCartSlice";
-
+// import {
+//   Magnifier,
+//   GlassMagnifier,
+//   SideBySideMagnifier,
+//   PictureInPictureMagnifier,
+//   MOUSE_ACTIVATION,
+//   TOUCH_ACTIVATION,
+// } from "react-image-magnifiers";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css"; // Import CSS file
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+const notify = () => {
+  toast.success("successfully added", {
+    position: "top-left",
+    autoClose: 1500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: false,
+    draggable: true,
+    theme: "dark",
+  });
+};
 export default function ProductDetails() {
   const { id } = useParams();
   const CartItems = useSelector((state) => state.CartItems);
@@ -24,6 +44,7 @@ export default function ProductDetails() {
     if (isPresent) {
       return;
     } else {
+      notify();
       dispatch(addtoCart(Product));
       dispatch(addingCartcount());
       dispatch(TotalPriceOfCart());
@@ -37,6 +58,7 @@ export default function ProductDetails() {
       return "right";
     }
   };
+
   return (
     <div className="dark:bg-[#111827]">
       <div
@@ -45,7 +67,6 @@ export default function ProductDetails() {
       >
         {/* This is Image Section  */}
         <div className=" overflow-hidden     sm:h-[95%]  lg:w-2/3 w-full ">
-          {/* <img src={Product.images[0].original} /> */}
           <ImageGallery
             items={images}
             showPlayButton={false}
@@ -106,6 +127,9 @@ export default function ProductDetails() {
             Add to Cart
           </button>
         </div>
+      </div>
+      <div className="mt-[20px] border-2 border-red-600">
+        <ToastContainer />
       </div>
     </div>
   );

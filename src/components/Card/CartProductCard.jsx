@@ -11,11 +11,17 @@ import {
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
-function CartProductCard({ value }) {
+function CartProductCard({ value, notifyMethod }) {
   const dispatch = useDispatch();
   const CartItems = useSelector((state) => state.CartItems);
-
+  const itemqtyFind = () => {
+    let item = CartItems.find((obj) => value.id == obj.id);
+    let ItemQty = item.ItemNum;
+    return ItemQty;
+  };
   const removeItem = (id) => {
+    notifyMethod("deleted product", false);
+
     dispatch(removeFromCart(id));
     dispatch(removeCartcount());
     dispatch(TotalPriceOfCart());
@@ -23,15 +29,21 @@ function CartProductCard({ value }) {
   const IncreasingQty = (id) => {
     dispatch(incrementItemNum(id));
     dispatch(TotalPriceOfCart());
+    if (itemqtyFind() < 4) {
+      notifyMethod("item Qty increases", true);
+    }
   };
   const DecreasingQty = (id) => {
     dispatch(decrementItemNum(id));
     dispatch(TotalPriceOfCart());
+    if (itemqtyFind() > 1) {
+      notifyMethod("item Qty decreases", false);
+    }
   };
 
   return (
     <>
-      <div className="flex flex-col xl:flex-row gap-[100px] xl:ml-[100px] relative group overflow-hidden">
+      <div className="flex flex-col xl:flex-row gap-[100px] xl:ml-[100px] relative group overflow-hidden ">
         <img src={value.images[0].original} className="w-[300px] h-[320px]" />
 
         <div>
@@ -84,7 +96,7 @@ function CartProductCard({ value }) {
           </p>
         </div>
         <button
-          className="absolute bg-secondary rounded-full px-2 top-[80%]  -right-[65px] group-hover:-right-0 duration-300 text-white text-[16px]"
+          className="absolute bg-secondary rounded-full px-4 py-1 top-[80%]  -right-[93px] group-hover:-right-0 duration-300 text-white text-[20px]"
           onClick={() => removeItem(value.id)}
         >
           Delete

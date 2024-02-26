@@ -744,6 +744,42 @@ const ProductData = [
   },
   // clothes objects start here
   {
+    id: 31,
+    title: "T shirt For Men  -  Black  ",
+    price: 2503,
+    rating: 3.6,
+    page: "clothes",
+    description:
+      "T shirt For Men  -  Black Design Smile Print Summer Wear Round Neck Half Sleeves Shirt T shirt For Men  -  Black Design Smile Print Summer Wear Round Neck Half Sleeves Shirt T shirt For Men  -  Black Design Smile Print Summer Wear Round Neck Half Sleeves Shirt",
+    images: [
+      {
+        original:
+          "https://static-01.daraz.pk/p/f642fc793d845ce384849ae41e744d0a.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/f642fc793d845ce384849ae41e744d0a.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/3472e3d51078e1fd2fa49bbdf91d61a9.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/3472e3d51078e1fd2fa49bbdf91d61a9.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/fda958d2bb06e158300a3c2b10cd8d75.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/fda958d2bb06e158300a3c2b10cd8d75.jpg_750x750.jpg_.webp",
+      },
+    ],
+    creationAt: "2024-02-09T19:41:51.000Z",
+    updatedAt: "2024-02-09T19:41:51.000Z",
+    category: {
+      id: 2,
+      name: "men",
+      image: "https://i.imgur.com/ZANVnHE.jpeg",
+    },
+  },
+  {
     id: 25,
     title: "Black Fashipn - T-shirt women, ",
     price: 43,
@@ -780,6 +816,42 @@ const ProductData = [
     },
   },
   {
+    id: 32,
+    title: "T shirt For Men  -  Body fit  ",
+    price: 6330,
+    rating: 5,
+    page: "clothes",
+    description:
+      "T shirt For Men  -  Black Design Smile Print Summer Wear Round Neck Half Sleeves Shirt T shirt For Men  -  Black Design Smile Print Summer Wear Round Neck Half Sleeves Shirt T shirt For Men  -  Black Design Smile Print Summer Wear Round Neck Half Sleeves Shirt",
+    images: [
+      {
+        original:
+          "https://static-01.daraz.pk/p/82708955a7f3af1acb356a788752ee60.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/82708955a7f3af1acb356a788752ee60.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/78253ee48ad672925e6b0b4ba31201bb.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/78253ee48ad672925e6b0b4ba31201bb.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/37a54a8dcca9099dc9b286f76097160e.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/37a54a8dcca9099dc9b286f76097160e.jpg_750x750.jpg_.webp",
+      },
+    ],
+    creationAt: "2024-02-09T19:41:51.000Z",
+    updatedAt: "2024-02-09T19:41:51.000Z",
+    category: {
+      id: 2,
+      name: "men",
+      image: "https://i.imgur.com/ZANVnHE.jpeg",
+    },
+  },
+  {
     id: 26,
     title: "Pink & Black Printed Tracksuit For Girls & Womens ",
     price: 43,
@@ -806,6 +878,42 @@ const ProductData = [
     category: {
       id: 2,
       name: "women",
+      image: "https://i.imgur.com/ZANVnHE.jpeg",
+    },
+  },
+  {
+    id: 33,
+    title: "Qaidi Number 804 Half Sleeves Men T shirt  ",
+    price: 4550,
+    rating: 4.9,
+    page: "clothes",
+    description:
+      "Qaidi Number 804 Half Sleeves Men T shirt Design Smile Print Summer Wear Round Neck Half Sleeves Shirt Qaidi Number 804 Half Sleeves Men T shirt Design Smile Print Summer Wear Round Neck Half Sleeves Shirt Qaidi Number 804 Half Sleeves Men T shirt Design Smile Print Summer Wear Round Neck Half Sleeves Shirt",
+    images: [
+      {
+        original:
+          "https://static-01.daraz.pk/p/1a95f797af38ec0623af93069c1bbe61.png_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/1a95f797af38ec0623af93069c1bbe61.png_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/5fc043581ca5588a693827d89716c5d8.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/5fc043581ca5588a693827d89716c5d8.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/fe1eb20ca7ec56a8a92afb636d3aaca8.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/fe1eb20ca7ec56a8a92afb636d3aaca8.jpg_750x750.jpg_.webp",
+      },
+    ],
+    creationAt: "2024-02-09T19:41:51.000Z",
+    updatedAt: "2024-02-09T19:41:51.000Z",
+    category: {
+      id: 2,
+      name: "men",
       image: "https://i.imgur.com/ZANVnHE.jpeg",
     },
   },
@@ -840,6 +948,42 @@ const ProductData = [
     },
   },
   {
+    id: 34,
+    title: "HY Boutique Linning Full Sleeve T.Shirt Upper  ",
+    price: 600,
+    rating: 3,
+    page: "clothes",
+    description:
+      "HY Boutique Linning Full Sleeve T.Shirt, Jumper, Top, Upper Design Smile Print Summer Wear Round Neck Half Sleeves Shirt HY Boutique Linning Full Sleeve T.Shirt, Jumper, Top, Upper Design Smile Print Summer Wear Round Neck Half Sleeves Shirt HY Boutique Linning Full Sleeve T.Shirt, Jumper, Top, Upper Design Smile Print Summer Wear Round Neck Half Sleeves Shirt",
+    images: [
+      {
+        original:
+          "https://static-01.daraz.pk/p/3c72e9b9369eab6aa24bef31a15504ac.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/3c72e9b9369eab6aa24bef31a15504ac.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/df4298e0a499818ebea08f58fb8e592f.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/df4298e0a499818ebea08f58fb8e592f.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/0d9d5270371b98e6c7e4666ee6733cf4.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/0d9d5270371b98e6c7e4666ee6733cf4.jpg_750x750.jpg_.webp",
+      },
+    ],
+    creationAt: "2024-02-09T19:41:51.000Z",
+    updatedAt: "2024-02-09T19:41:51.000Z",
+    category: {
+      id: 2,
+      name: "men",
+      image: "https://i.imgur.com/ZANVnHE.jpeg",
+    },
+  },
+  {
     id: 28,
     title: "BLUE BUTTERFLY Hoodie For Women Printed Kangaroo",
     price: 43,
@@ -866,6 +1010,42 @@ const ProductData = [
     category: {
       id: 2,
       name: "women",
+      image: "https://i.imgur.com/ZANVnHE.jpeg",
+    },
+  },
+  {
+    id: 35,
+    title: "Will class logo T-Shirt for men & boy   ",
+    price: 500,
+    rating: 3.5,
+    page: "clothes",
+    description:
+      "Will class logo T-Shirt for men & boy, Jumper, Top, Upper Design Smile Print Summer Wear Round Neck Half Sleeves Shirt Will class logo T-Shirt for men & boy, Jumper, Top, Upper Design Smile Print Summer Wear Round Neck Half Sleeves Shirt Will class logo T-Shirt for men & boy, Jumper, Top, Upper Design Smile Print Summer Wear Round Neck Half Sleeves Shirt",
+    images: [
+      {
+        original:
+          "https://static-01.daraz.pk/p/ecf4e54ce3fdb41d4a985eea2783d4bf.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/ecf4e54ce3fdb41d4a985eea2783d4bf.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/2625602534248c1996f008d3f11847ad.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/2625602534248c1996f008d3f11847ad.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/a99c08316fccd7b496fc0278afdbf5eb.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/a99c08316fccd7b496fc0278afdbf5eb.jpg_750x750.jpg_.webp",
+      },
+    ],
+    creationAt: "2024-02-09T19:41:51.000Z",
+    updatedAt: "2024-02-09T19:41:51.000Z",
+    category: {
+      id: 2,
+      name: "men",
       image: "https://i.imgur.com/ZANVnHE.jpeg",
     },
   },
@@ -905,6 +1085,118 @@ const ProductData = [
       image: "https://i.imgur.com/ZANVnHE.jpeg",
     },
   },
+
+  {
+    id: 36,
+    title:
+      "Black Pubg printed summer gymwear trackuit trouser & t-shirt for men and boys",
+    price: 5006,
+    rating: 3.4,
+    page: "clothes",
+    description:
+      "Will class logo T-Shirt for men & boy, Jumper, Top, Upper Design Smile Print Summer Wear Round Neck Half Sleeves Shirt Will class logo T-Shirt for men & boy, Jumper, Top, Upper Design Smile Print Summer Wear Round Neck Half Sleeves Shirt Will class logo T-Shirt for men & boy, Jumper, Top, Upper Design Smile Print Summer Wear Round Neck Half Sleeves Shirt",
+    images: [
+      {
+        original:
+          "https://static-01.daraz.pk/p/0833d3625ac7bffe552fa17ab858ccd3.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/0833d3625ac7bffe552fa17ab858ccd3.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/9acd5f46268c802a6fb7446e37cbb714.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/9acd5f46268c802a6fb7446e37cbb714.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/d9243205244d9b1d2b09cc5326ac9173.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/d9243205244d9b1d2b09cc5326ac9173.jpg_750x750.jpg_.webp",
+      },
+    ],
+    creationAt: "2024-02-09T19:41:51.000Z",
+    updatedAt: "2024-02-09T19:41:51.000Z",
+    category: {
+      id: 2,
+      name: "men",
+      image: "https://i.imgur.com/ZANVnHE.jpeg",
+    },
+  },
+  {
+    id: 37,
+    title:
+      "Black Trendy Printed Tracksuit For Men and Boys - Soft and Comfortable ",
+    price: 5006,
+    rating: 3.4,
+    page: "clothes",
+    description:
+      "Black Trendy Printed Tracksuit For Men and Boys - Soft and Comfortable Fabric T Shirt and Trouser Printed Tracksuit Black Trendy Printed Tracksuit For Men and Boys - Soft and Comfortable Fabric T Shirt and Trouser Printed Tracksuit Black Trendy Printed Tracksuit For Men and Boys - Soft and Comfortable Fabric T Shirt and Trouser Printed Tracksuit",
+    images: [
+      {
+        original:
+          "https://static-01.daraz.pk/p/a16a87bc669c8be5b80eade1ecb3dce1.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/a16a87bc669c8be5b80eade1ecb3dce1.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/2ff2074c4bb281bc85eba476a21db7be.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/2ff2074c4bb281bc85eba476a21db7be.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/357cf03163d553519319cf611c4a94df.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/357cf03163d553519319cf611c4a94df.jpg_750x750.jpg_.webp",
+      },
+    ],
+    creationAt: "2024-02-09T19:41:51.000Z",
+    updatedAt: "2024-02-09T19:41:51.000Z",
+    category: {
+      id: 2,
+      name: "men",
+      image: "https://i.imgur.com/ZANVnHE.jpeg",
+    },
+  },
+  {
+    id: 38,
+    title:
+      "Red Stylish Printed Tshirt & Trouser tracksuit for men - Trouser shirt ",
+    price: 61241,
+    rating: 3.1,
+    page: "clothes",
+    description:
+      "Red Stylish Printed Tshirt & Trouser tracksuit for men - Trouser shirt for men - Bundle of 2 Red Stylish Printed Tshirt & Trouser tracksuit for men - Trouser shirt for men - Bundle of 2 Red Stylish Printed Tshirt & Trouser tracksuit for men - Trouser shirt for men",
+    images: [
+      {
+        original:
+          "https://static-01.daraz.pk/p/9da84b998c830b97442ddcbcb4c00080.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/9da84b998c830b97442ddcbcb4c00080.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/069892a004645350353ac2a392d7f588.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/069892a004645350353ac2a392d7f588.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/66791174a7626d9168e887843a346602.png_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/66791174a7626d9168e887843a346602.png_750x750.jpg_.webp",
+      },
+    ],
+    creationAt: "2024-02-09T19:41:51.000Z",
+    updatedAt: "2024-02-09T19:41:51.000Z",
+    category: {
+      id: 2,
+      name: "men",
+      image: "https://i.imgur.com/ZANVnHE.jpeg",
+    },
+  },
   {
     id: 30,
     title: "T Shirt For Girls New and Stylish  ",
@@ -938,6 +1230,42 @@ const ProductData = [
     category: {
       id: 2,
       name: "women",
+      image: "https://i.imgur.com/ZANVnHE.jpeg",
+    },
+  },
+  {
+    id: 39,
+    title: "Richman Party Track Suit for Men and Women Full sleeve shirts",
+    price: 6241,
+    rating: 4.5,
+    page: "clothes",
+    description:
+      "Richman Party Track Suit for Men and Women Full sleeve shirts and Trouser pack of 2 piece Richman Party Track Suit for Men and Women Full sleeve shirts and Trouser pack of 2 piece Richman Party Track Suit for Men and Women Full sleeve shirts and Trouser pack of 2 piece",
+    images: [
+      {
+        original:
+          "https://static-01.daraz.pk/p/b7ec4b882b14c21c3ac508c0e6687319.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/b7ec4b882b14c21c3ac508c0e6687319.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/ff1a00d24974dca0bbe419c72824b2fd.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/ff1a00d24974dca0bbe419c72824b2fd.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/e0d97f4084b2bbe74f9dafbf50bde75c.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/e0d97f4084b2bbe74f9dafbf50bde75c.jpg_750x750.jpg_.webp",
+      },
+    ],
+    creationAt: "2024-02-09T19:41:51.000Z",
+    updatedAt: "2024-02-09T19:41:51.000Z",
+    category: {
+      id: 2,
+      name: "men",
       image: "https://i.imgur.com/ZANVnHE.jpeg",
     },
   },
