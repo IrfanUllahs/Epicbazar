@@ -745,6 +745,43 @@ const ProductData = [
   },
   // clothes objects start here
   {
+    id: 40,
+    title:
+      " Piece Malai Printed Unstitched Suit for Girls/Womens VOL-33-3314 clothes",
+    price: 9532,
+    rating: 3.2,
+    page: "clothes",
+    description:
+      "T shirt For Men  -  Black Design Smile Print Summer Wear Round Neck Half Sleeves Shirt T shirt For Men  -  Black Design Smile Print Summer Wear Round Neck Half Sleeves Shirt T shirt For Men  -  Black Design Smile Print Summer Wear Round Neck Half Sleeves Shirt",
+    images: [
+      {
+        original:
+          "https://static-01.daraz.pk/p/398200cc9f50767ab7c605639e382603.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/398200cc9f50767ab7c605639e382603.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/272523a474a31427073c5ae0fda2deb5.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/272523a474a31427073c5ae0fda2deb5.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/26e063cf89e3956cde1c9e75fcc7cc9a.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/26e063cf89e3956cde1c9e75fcc7cc9a.jpg_750x750.jpg_.webp",
+      },
+    ],
+    creationAt: "2024-02-09T19:41:51.000Z",
+    updatedAt: "2024-02-09T19:41:51.000Z",
+    category: {
+      id: 2,
+      name: "women",
+      image: "https://i.imgur.com/ZANVnHE.jpeg",
+    },
+  },
+  {
     id: 31,
     title: "T shirt For Men  -  Black  ",
     price: 2503,
@@ -1162,9 +1199,45 @@ const ProductData = [
     },
   },
   {
+    id: 42,
+    title: "Partywear cloth suit unstitched Fashion designer fancy dress ",
+    price: 7006,
+    rating: 3.9,
+    page: "clothes",
+    description:
+      "Partywear cloth suit unstitched Fashion designer fancy dress Fabric T Shirt and Trouser Printed Tracksuit Partywear cloth suit unstitched Fashion designer fancy dress Fabric T Shirt and Trouser Printed Tracksuit Partywear cloth suit unstitched Fashion designer fancy dress Fabric T Shirt and Trouser Printed Tracksuit",
+    images: [
+      {
+        original:
+          "https://static-01.daraz.pk/p/e24c2192bf29a087650509f791f18683.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/e24c2192bf29a087650509f791f18683.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/1800913039e7f8d20206ec61b09ed9d3.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/1800913039e7f8d20206ec61b09ed9d3.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/e24c2192bf29a087650509f791f18683.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/e24c2192bf29a087650509f791f18683.jpg_750x750.jpg_.webp",
+      },
+    ],
+    creationAt: "2024-02-09T19:41:51.000Z",
+    updatedAt: "2024-02-09T19:41:51.000Z",
+    category: {
+      id: 2,
+      name: "women",
+      image: "https://i.imgur.com/ZANVnHE.jpeg",
+    },
+  },
+  {
     id: 38,
     title:
-      "Red Stylish Printed Tshirt & Trouser tracksuit for men - Trouser shirt ",
+      " Stylish Printed Tshirt & Trouser tracksuit for men - Trouser shirt ",
     price: 61241,
     rating: 3.1,
     page: "clothes",
@@ -1267,6 +1340,43 @@ const ProductData = [
     category: {
       id: 2,
       name: "men",
+      image: "https://i.imgur.com/ZANVnHE.jpeg",
+    },
+  },
+  {
+    id: 41,
+    title:
+      " Purple Katan Silk 3 Piece Unstitched clothes for Women/Girlss fabric",
+    price: 10023,
+    rating: 4,
+    page: "clothes",
+    description:
+      "Sunaina Textile Purple Katan Silk 3 Piece Unstitched Fabric for Women/Girlss and Trouser pack of 2 piece Sunaina Textile Purple Katan Silk 3 Piece Unstitched Fabric for Women/Girlss and Trouser pack of 2 piece Sunaina Textile Purple Katan Silk 3 Piece Unstitched Fabric for Women/Girlss and Trouser pack of 2 piece",
+    images: [
+      {
+        original:
+          "https://static-01.daraz.pk/p/c129eb426e0784b3cdfa53003eea95e5.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/c129eb426e0784b3cdfa53003eea95e5.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/dcfb6b57f68b0ce92aeff81f0bb7f1c9.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/dcfb6b57f68b0ce92aeff81f0bb7f1c9.jpg_750x750.jpg_.webp",
+      },
+      {
+        original:
+          "https://static-01.daraz.pk/p/0c97cc41f05631b9b6c92077ebeb8515.jpg_750x750.jpg_.webp",
+        thumbnail:
+          "https://static-01.daraz.pk/p/0c97cc41f05631b9b6c92077ebeb8515.jpg_750x750.jpg_.webp",
+      },
+    ],
+    creationAt: "2024-02-09T19:41:51.000Z",
+    updatedAt: "2024-02-09T19:41:51.000Z",
+    category: {
+      id: 2,
+      name: "women",
       image: "https://i.imgur.com/ZANVnHE.jpeg",
     },
   },
