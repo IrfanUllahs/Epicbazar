@@ -23,7 +23,7 @@ function Clothes() {
   }, []);
   return (
     <div className="dark:bg-[#111827]">
-      <div className="container py-[50px]">
+      <div className="container pt-[150px]">
         <div className="flex justify-end">
           {/* <select
             id="gender"

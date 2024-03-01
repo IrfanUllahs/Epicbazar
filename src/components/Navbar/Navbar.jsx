@@ -64,7 +64,7 @@ export default function Navbar() {
     dispatch(searchQuerymethod(searchQuery));
   };
   return (
-    <div className="fixed w-full z-30 bg-white">
+    <div className="fixed w-full z-30 bg-white border-2 border-red-600 top-0 ">
       <div className="shadow-md dark:bg-gray-900 dark:text-white  dark:shadow-black duration-200 relative z-40">
         <div className="bg-primary/40 py-3">
           <div className="container flex justify-between items-center">

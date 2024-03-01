@@ -26,9 +26,29 @@ function Electronics() {
 
   return (
     <div className="dark:bg-[#111827]">
-      <div className="container py-[50px] ">
+      <div className="container pt-[150px] ">
         {/* filter code is here */}
-        <div className="flex justify-end">
+        <div className="flex justify-end gap-4">
+          <Menu>
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+              Sort
+            </MenuButton>
+            <MenuList>
+              <MenuItem onClick={() => FiltereData("computer")}>
+                Price(A-Z)
+              </MenuItem>
+              <MenuItem onClick={() => FiltereData("headphone")}>
+                Price(Z-A)
+              </MenuItem>
+              <MenuItem onClick={() => FiltereData("other")}>
+                rating(A-Z)
+              </MenuItem>
+              <MenuItem onClick={() => FiltereData("all")}>
+                {" "}
+                rating(Z-A)
+              </MenuItem>
+            </MenuList>
+          </Menu>
           <Menu>
             <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
               Category
