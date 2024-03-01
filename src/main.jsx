@@ -18,6 +18,7 @@ import ProductDetails from "./components/ProuductDetail/ProductDetails.jsx";
 import Addtocart from "./components/AddtoCart/AddtoCart.jsx";
 
 import { extendTheme } from "@chakra-ui/react";
+import SearchData from "./components/SearchPage/SearchData.jsx";
 
 // 2. Call `extendTheme` and pass your custom values
 const theme = extendTheme({
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/cart/",
         element: <Addtocart />,
+      },
+      {
+        path: "/search",
+        element: <SearchData />,
       },
     ],
   },
