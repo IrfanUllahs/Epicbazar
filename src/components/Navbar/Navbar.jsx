@@ -6,8 +6,6 @@ import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import { RiMenu3Fill } from "react-icons/ri";
 import { FaSearch } from "react-icons/fa";
-
-import { FaCaretDown } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { searchQuerymethod } from "../features/addtoCart/AddtoCartSlice";
