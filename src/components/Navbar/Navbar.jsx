@@ -107,7 +107,7 @@ export default function Navbar() {
               </Link>
               {/* dark mode button is here */}
               <div
-                className="hover:bg-slate-500 sm:block hidden rounded-sm p-1 group dark-hover:bg-blue-400  "
+                className="bg-slate-500 sm:block hidden rounded-md p-1 group dark-hover:bg-blue-400  "
                 onClick={() => setThemomde((preValue) => !preValue)}
               >
                 {themomde ? (
