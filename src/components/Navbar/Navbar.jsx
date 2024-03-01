@@ -9,16 +9,17 @@ import { FaSearch } from "react-icons/fa";
 
 import { FaCaretDown } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
-
+import { useSelector, useDispatch } from "react-redux";
+import { searchQuerymethod } from "../features/addtoCart/AddtoCartSlice";
 export default function Navbar() {
   const count = useSelector((state) => state.cartProductCount);
+  const dispatch = useDispatch();
   const [themomde, setThemomde] = useState(() => {
     const storedTheme = localStorage.getItem("themeMode");
     return storedTheme ? storedTheme === "light" : true;
   });
   const [isClicked, setisClicked] = useState(true);
-
+  const [searchQuery, setsearchQuery] = useState("");
   useEffect(() => {
     localStorage.setItem("themeMode", themomde ? "light" : "dark");
     const html = document.querySelector("html");
@@ -61,6 +62,9 @@ export default function Navbar() {
     },
   ];
   const [isDisplay, setisDisplay] = useState(false);
+  const searchItems = () => {
+    dispatch(searchQuerymethod(searchQuery));
+  };
   return (
     <>
       <div className="shadow-md dark:bg-gray-900 dark:text-white  dark:shadow-black duration-200 relative z-40">
@@ -76,13 +80,16 @@ export default function Navbar() {
 
             <div
               className=" border border-gray-300 rounded-full px-[10px] py-[4px] sm:w-[200px] w-[40px] focus:outline focus:border-secondary sm:hover:w-[300px] hover:w-[250px]	duration-500 ease-in-out  bg-white
-                dark:bg-black absolute right-[50px] sm:right-[190px]  md:right-[200px] cursor-pointer  group "
+                dark:bg-black absolute right-[50px] sm:right-[190px]  md:right-[200px] cursor-pointer  group flex h-[40px] justify-center items-center "
             >
               <input
                 placeholder="search "
                 className="w-full h-full border-none focus:border-none focus:outline-none group-hover:text-secondary bg-white dark:bg-black sm:inline-block hidden  group-hover:inline-block "
+                onChange={(e) => setsearchQuery(e.target.value)}
               />
-              <FaSearch className="sm:hidden group-hover:hidden" />
+              <Link to={"/search"}>
+                <FaSearch className="" onClick={searchItems} />
+              </Link>
             </div>
             {/* right portion  */}
             <div className=" flex gap-4 items-center relative  ">

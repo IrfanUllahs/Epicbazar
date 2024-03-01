@@ -8,16 +8,9 @@ import {
   addingCartcount,
   TotalPriceOfCart,
 } from "../features/addtoCart/AddtoCartSlice";
-// import {
-//   Magnifier,
-//   GlassMagnifier,
-//   SideBySideMagnifier,
-//   PictureInPictureMagnifier,
-//   MOUSE_ACTIVATION,
-//   TOUCH_ACTIVATION,
-// } from "react-image-magnifiers";
+
 import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css"; // Import CSS file
+import "react-image-gallery/styles/css/image-gallery.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

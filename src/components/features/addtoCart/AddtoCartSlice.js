@@ -6,7 +6,7 @@ const initialState = {
   //   text: "hi this is Irfan",
   // },
   cartProductCount: 0,
-
+  searchQuery: "",
   TotalCartPrice: 1,
   CartItems: [
     // {
@@ -25,10 +25,7 @@ export const cartSlice = createSlice({
         ItemNum: 1,
         ThisItemPrice: action.payload.price,
       };
-      //   const todo = {
-      //     id: nanoid(),
-      //     text: action.payload,
-      //   };
+
       if (!action.payload) {
         alert("enter a message");
         return;
@@ -65,6 +62,9 @@ export const cartSlice = createSlice({
         return (accumulator += item.ThisItemPrice);
       }, 0);
     },
+    searchQuerymethod: (state, action) => {
+      state.searchQuery = action.payload;
+    },
   },
 });
 export const {
@@ -75,5 +75,6 @@ export const {
   incrementItemNum,
   decrementItemNum,
   TotalPriceOfCart,
+  searchQuerymethod,
 } = cartSlice.actions;
 export default cartSlice.reducer;
