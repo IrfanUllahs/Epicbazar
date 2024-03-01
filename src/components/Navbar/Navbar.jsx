@@ -76,7 +76,7 @@ export default function Navbar() {
 
             <div
               className=" border border-gray-300 rounded-full px-[10px] py-[4px] sm:w-[200px] w-[40px] focus:outline focus:border-secondary sm:hover:w-[300px] hover:w-[250px]	duration-500 ease-in-out  bg-white
-                dark:bg-black absolute right-[50px] sm:right-[215px]  md:right-[300px] cursor-pointer  group "
+                dark:bg-black absolute right-[50px] sm:right-[190px]  md:right-[200px] cursor-pointer  group "
             >
               <input
                 placeholder="search "
