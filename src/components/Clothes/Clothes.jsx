@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 // import ProductData from "../../../public/Data/ProductData";
 import Card from "../Card/Card";
-import ProductData from "../../Data/ProductData.js";
+import ProductsData from "../../Data/ProductData.js";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 function Clothes() {
   const [filteredItem, setfilteredItem] = useState([]);
   const [selectcategory, setselectcategory] = useState("all");
+  const [sortedValue, setsortedValue] = useState("");
 
   const FiltereData = (category) => {
     setselectcategory(category);
     const filterValues =
       category == "all"
-        ? ProductData
-        : ProductData.filter((value) => value.category.name == category);
+        ? ProductsData
+        : ProductsData.filter((value) => value.category.name == category);
     setfilteredItem(filterValues);
   };
   const sortData = (sortValue) => {
@@ -31,31 +32,19 @@ function Clothes() {
       const sortedItems = [...filteredItem].sort((a, b) => a.rating - b.rating);
       setfilteredItem(sortedItems);
     }
+    setsortedValue(sortValue);
   };
   useEffect(() => {
-    setfilteredItem(ProductData);
+    setfilteredItem(ProductsData);
   }, []);
+  useEffect(() => {
+    sortData(sortedValue);
+  }, [selectcategory]);
+
   return (
     <div className="dark:bg-[#111827]">
       <div className="container pt-[150px]">
         <div className="flex justify-end gap-4">
-          {/* <select
-            id="gender"
-            name="gender"
-            value={selectcategory}
-            className="w-[200px] block border-[4px] border-yellow-600 outline-none focus:outline-none p-4 dark:bg-black dark:text-secondary rounded-md "
-            onChange={(e) => FiltereData(e.target.value)}
-          >
-            <option value="women" className="text-[20px]">
-              women
-            </option>
-            <option value="men" className="text-[20px]">
-              men
-            </option>
-            <option value="all" className="text-[20px]">
-              All
-            </option>
-          </select> */}
           <Menu>
             <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
               Sort

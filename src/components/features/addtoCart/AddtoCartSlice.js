@@ -7,7 +7,7 @@ const initialState = {
   // },
   cartProductCount: 0,
   searchQuery: "",
-  TotalCartPrice: 1,
+  TotalCartPrice: 0,
   CartItems: [
     // {
     //   id: 1,

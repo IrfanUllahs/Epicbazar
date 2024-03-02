@@ -284,6 +284,7 @@ const ProductData = [
     ],
     title: "DELL Laptop",
     rating: 4.5,
+    price: 700,
     aosDelay: "200",
     page: "electronics",
     description:
@@ -375,6 +376,7 @@ const ProductData = [
     ],
     title: "MAC",
     rating: 4.5,
+    price: 444,
     aosDelay: "200",
     page: "electronics",
     description:

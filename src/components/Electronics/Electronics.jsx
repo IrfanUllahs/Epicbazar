@@ -9,6 +9,7 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 function Electronics() {
   const [filteredItem, setfilteredItem] = useState([]);
   const [selectcategory, setselectcategory] = useState("all");
+  const [sortedValue, setsortedValue] = useState("");
 
   const FiltereData = (category) => {
     setselectcategory(category);
@@ -17,6 +18,7 @@ function Electronics() {
         ? ProductsData
         : ProductsData.filter((value) => value.category.name == category);
     setfilteredItem(filterValues);
+    // sortData(sortedValue);
   };
   const sortData = (sortValue) => {
     if (sortValue == "price(a-z)") {
@@ -32,10 +34,14 @@ function Electronics() {
       const sortedItems = [...filteredItem].sort((a, b) => a.rating - b.rating);
       setfilteredItem(sortedItems);
     }
+    setsortedValue(sortValue);
   };
   useEffect(() => {
     setfilteredItem(ProductsData);
   }, []);
+  useEffect(() => {
+    sortData(sortedValue);
+  }, [selectcategory]);
 
   return (
     <div className="dark:bg-[#111827]">
