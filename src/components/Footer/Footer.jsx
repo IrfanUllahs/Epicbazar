@@ -8,6 +8,7 @@ import {
   FaLocationArrow,
   FaMobileAlt,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const BannerImg = {
   backgroundImage: `url(${Banner})`,
@@ -21,19 +22,19 @@ const BannerImg = {
 const FooterLinks = [
   {
     title: "Home",
-    link: "/#",
+    link: "/",
   },
   {
-    title: "About",
-    link: "/#about",
+    title: "clothes",
+    link: "/clothes",
   },
   {
-    title: "Contact",
-    link: "/#contact",
+    title: "Electronics",
+    link: "/Electronics",
   },
   {
-    title: "Blog",
-    link: "/#blog",
+    title: "cart",
+    link: "/cart/",
   },
 ];
 
@@ -59,33 +60,18 @@ const Footer = () => {
             <div>
               <div className="py-8 px-4">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Important Links
-                </h1>
-                <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
-                    <li
-                      className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
-                    >
-                      <span>{link.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div>
-              <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
                   Links
                 </h1>
                 <ul className="flex flex-col gap-3">
                   {FooterLinks.map((link) => (
-                    <li
-                      className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
-                    >
-                      <span>{link.title}</span>
-                    </li>
+                    <Link to={link.link}>
+                      <li
+                        className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
+                        key={link.title}
+                      >
+                        <span>{link.title}</span>
+                      </li>
+                    </Link>
                   ))}
                 </ul>
               </div>
@@ -95,13 +81,19 @@ const Footer = () => {
 
             <div>
               <div className="flex items-center gap-3 mt-6">
-                <a href="#">
+                <a
+                  href="https://www.instagram.com/irfanullah8168/"
+                  target="_blank"
+                >
                   <FaInstagram className="text-3xl" />
                 </a>
                 <a href="#">
                   <FaFacebook className="text-3xl" />
                 </a>
-                <a href="#">
+                <a
+                  href="https://www.linkedin.com/in/irfan-ullah-2155b5235"
+                  target="_blank"
+                >
                   <FaLinkedin className="text-3xl" />
                 </a>
               </div>

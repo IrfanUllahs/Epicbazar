@@ -64,7 +64,7 @@ export default function Navbar() {
     dispatch(searchQuerymethod(searchQuery));
   };
   return (
-    <>
+    <div className="fixed w-full z-30 bg-white  top-0 ">
       <div className="shadow-md dark:bg-gray-900 dark:text-white  dark:shadow-black duration-200 relative z-40">
         <div className="bg-primary/40 py-3">
           <div className="container flex justify-between items-center">
@@ -110,7 +110,7 @@ export default function Navbar() {
               </Link>
               {/* dark mode button is here */}
               <div
-                className="bg-slate-500 sm:block hidden rounded-sm p-1 group dark:bg-yellow-900 relative  "
+className="bg-slate-500 sm:block hidden rounded-sm p-1 group dark:bg-yellow-900 relative  "
                 onClick={() => setThemomde((preValue) => !preValue)}
               >
                 {themomde ? (
@@ -232,6 +232,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

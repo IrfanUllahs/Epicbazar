@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import Card from "../Card/Card";
 import ProductsData from "../../Data/ProductData";
 import { useState } from "react";
-import { FaStar } from "react-icons/fa6";
-import { IoMdArrowDropdown } from "react-icons/io";
+
 import { Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
@@ -19,16 +18,49 @@ function Electronics() {
         : ProductsData.filter((value) => value.category.name == category);
     setfilteredItem(filterValues);
   };
-
+  const sortData = (sortValue) => {
+    if (sortValue == "price(a-z)") {
+      const sortedItems = [...filteredItem].sort((a, b) => b.price - a.price);
+      setfilteredItem(sortedItems);
+    } else if (sortValue == "price(z-a)") {
+      const sortedItems = [...filteredItem].sort((a, b) => a.price - b.price);
+      setfilteredItem(sortedItems);
+    } else if (sortValue == "rating(a-z)") {
+      const sortedItems = [...filteredItem].sort((a, b) => b.rating - a.rating);
+      setfilteredItem(sortedItems);
+    } else if (sortValue == "rating(z-a)") {
+      const sortedItems = [...filteredItem].sort((a, b) => a.rating - b.rating);
+      setfilteredItem(sortedItems);
+    }
+  };
   useEffect(() => {
     setfilteredItem(ProductsData);
   }, []);
 
   return (
     <div className="dark:bg-[#111827]">
-      <div className="container py-[50px] ">
+      <div className="container pt-[150px] ">
         {/* filter code is here */}
-        <div className="flex justify-end">
+        <div className="flex justify-end gap-4">
+          <Menu>
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+              Sort
+            </MenuButton>
+            <MenuList>
+              <MenuItem onClick={() => sortData("price(a-z)")}>
+                Price(A-Z)
+              </MenuItem>
+              <MenuItem onClick={() => sortData("price(z-a)")}>
+                Price(Z-A)
+              </MenuItem>
+              <MenuItem onClick={() => sortData("rating(a-z)")}>
+                rating(A-Z)
+              </MenuItem>
+              <MenuItem onClick={() => sortData("rating(z-a)")}>
+                rating(Z-A)
+              </MenuItem>
+            </MenuList>
+          </Menu>
           <Menu>
             <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
               Category

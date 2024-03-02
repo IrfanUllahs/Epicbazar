@@ -44,59 +44,57 @@ function HeroSection() {
   };
 
   return (
-    <>
-      <div className="bg-gray-200 h-[550px] relative overflow-hidden flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
-        {/* container is here */}
-        <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-[60%] right-0 rounded-3xl rotate-45 "></div>
-        <div className="container pt-[35px] px-2 ">
-          {/* hero content section is here  */}
-          <Slider {...settings}>
-            {ImageList.map((value) => (
-              <div key={value.id}>
-                <div
-                  className="flex  justify-center items-center flex-col sm:flex-row group
+    <div className="bg-gray-200 h-[550px] relative overflow-hidden flex justify-center items-center dark:bg-gray-950  dark:text-white duration-200  mt-[100px] ">
+      {/* container is here */}
+      <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-[60%] right-0 rounded-3xl rotate-45 "></div>
+      <div className="container pt-[35px] px-2 ">
+        {/* hero content section is here  */}
+        <Slider {...settings}>
+          {ImageList.map((value) => (
+            <div key={value.id}>
+              <div
+                className="flex  justify-center items-center flex-col sm:flex-row group
           "
-                >
-                  {/* // text contents are here */}
-                  <div className="flex flex-col sm:gap-6   items-start sm:w-[50%]  order-2 sm:order-1">
-                    <h1
-                      className="text-3xl sm:text-6xl lg:text-7xl font-bold "
-                      data-aos="zoom-out"
-                    >
-                      {value.title}
-                    </h1>
-                    <p
-                      data-aos="fade-up"
-                      data-aos-duration="500"
-                      data-aos-delay="100"
-                      className="text-sm"
-                    >
-                      {value.description}
-                    </p>
-                    <button className="bg-secondary rounded-full sm:px-3 sm:py-2 px-1 hover:bg-primary ">
-                      Click Here
-                    </button>
-                  </div>
-                  {/* the image is here */}
-                  <div
-                    className=" flex relative order-1 sm:order-2 "
-                    data-aos="zoom-in"
-                    data-aos-once="true"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
+              >
+                {/* // text contents are here */}
+                <div className="flex flex-col sm:gap-6   items-start sm:w-[50%]  order-2 sm:order-1">
+                  <h1
+                    className="text-3xl sm:text-6xl lg:text-7xl font-bold "
+                    data-aos="zoom-out"
                   >
-                    <img
-                      src={value.img}
-                      className=" w-[250px] h-[250px] sm:h-[500px] sm:w-[500px] object-contain mx-auto "
-                    />
-                  </div>
+                    {value.title}
+                  </h1>
+                  <p
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                    className="text-sm"
+                  >
+                    {value.description}
+                  </p>
+                  <button className="bg-secondary rounded-full sm:px-3 sm:py-2 px-1 hover:bg-primary ">
+                    Click Here
+                  </button>
+                </div>
+                {/* the image is here */}
+                <div
+                  className=" flex relative order-1 sm:order-2 "
+                  data-aos="zoom-in"
+                  data-aos-once="true"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                >
+                  <img
+                    src={value.img}
+                    className=" w-[250px] h-[250px] sm:h-[500px] sm:w-[500px] object-contain mx-auto "
+                  />
                 </div>
               </div>
-            ))}
-          </Slider>
-        </div>
+            </div>
+          ))}
+        </Slider>
       </div>
-    </>
+    </div>
   );
 }
 

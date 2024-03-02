@@ -8,15 +8,6 @@ import Testimonials from "./Testimonal/Testimonials";
 // import "aos/dist/aos.css";
 
 function Home() {
-  // React.useEffect(() => {
-  //   AOS.init({
-  //     offset: 100,
-  //     duration: 800,
-  //     easing: "ease-in-sine",
-  //     delay: 100,
-  //   });
-  //   AOS.refresh();
-  // }, []);
   return (
     <>
       <HeroSection />

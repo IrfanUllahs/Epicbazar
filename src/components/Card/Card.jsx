@@ -27,7 +27,10 @@ function Card({ value }) {
             className="flex
              items-center justify-between gap-[5px]  "
           >
-            <p className="text-gray-500">{value.category.name}</p>
+            <div className="flex font-bold text-secondary text-[17px]">
+              <p>Rs.</p>
+              <p>{value.price}</p>
+            </div>
             <div
               className="flex
                   items-center gap-2"
