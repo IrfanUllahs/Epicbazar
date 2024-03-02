@@ -3,6 +3,8 @@ import Img1 from "/images/shirtsImages/1.png";
 import Img2 from "/images/shirtsImages/shirt2.png";
 import Img3 from "/images/shirtsImages/shirt3.png";
 import Img4 from "/images/shirtsImages/shirt1.png";
+import Img5 from "/images/shirtsImages/irfan1.png";
+import Img6 from "/images/shirtsImages/irfan.png";
 import { FaStar } from "react-icons/fa6";
 
 const ProductsData = [
@@ -30,6 +32,20 @@ const ProductsData = [
   {
     id: 4,
     img: Img4,
+    title: "Simple",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
+  },
+  {
+    id: 5,
+    img: Img5,
+    title: "Simple",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
+  },
+  {
+    id: 6,
+    img: Img6,
     title: "Simple",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
