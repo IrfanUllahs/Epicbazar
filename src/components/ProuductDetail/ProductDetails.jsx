@@ -56,7 +56,7 @@ export default function ProductDetails() {
     <div className="dark:bg-[#111827]">
       <div
         className="container md:p-[50px] p-[20px]   flex lg:flex-row flex-col
-      md:gap-[50px] gap-[30px]"
+      md:gap-[50px] gap-[30px] mt-[150px] "
       >
         {/* This is Image Section  */}
         <div className=" overflow-hidden     sm:h-[95%]  lg:w-2/3 w-full ">

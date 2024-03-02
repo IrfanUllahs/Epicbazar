@@ -35,7 +35,7 @@ function AddtoCart() {
   return (
     <>
       <div className="dark:bg-gray-900 dark:text-white ">
-        <div className="container py-[100px] border dark:border-white  flex flex-col gap-6 overflow-x-auto ">
+        <div className="container py-[100px] border dark:border-white  flex flex-col gap-6 overflow-x-auto mt-[100px] ">
           {CartItems.map((value) => (
             <CartProductCard
               value={value}

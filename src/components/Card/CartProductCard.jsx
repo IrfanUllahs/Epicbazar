@@ -43,7 +43,7 @@ function CartProductCard({ value, notifyMethod }) {
 
   return (
     <>
-      <div className="flex flex-col xl:flex-row gap-[100px] xl:ml-[100px] relative group overflow-hidden ">
+      <div className="flex flex-col md:flex-row gap-[100px] xl:ml-[100px] relative group overflow-hidden ">
         <img src={value.images[0].original} className="w-[300px] h-[320px]" />
 
         <div>
