@@ -44,7 +44,7 @@ function HeroSection() {
   };
 
   return (
-    <div className="bg-gray-200 h-[550px] relative overflow-hidden flex justify-center items-center dark:bg-gray-950  dark:text-white duration-200 border-2 border-red-700 mt-[100px] ">
+    <div className="bg-gray-200 h-[550px] relative overflow-hidden flex justify-center items-center dark:bg-gray-950  dark:text-white duration-200  mt-[100px] ">
       {/* container is here */}
       <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-[60%] right-0 rounded-3xl rotate-45 "></div>
       <div className="container pt-[35px] px-2 ">

@@ -17,14 +17,28 @@ function Clothes() {
         : ProductData.filter((value) => value.category.name == category);
     setfilteredItem(filterValues);
   };
-
+  const sortData = (sortValue) => {
+    if (sortValue == "price(a-z)") {
+      const sortedItems = [...filteredItem].sort((a, b) => b.price - a.price);
+      setfilteredItem(sortedItems);
+    } else if (sortValue == "price(z-a)") {
+      const sortedItems = [...filteredItem].sort((a, b) => a.price - b.price);
+      setfilteredItem(sortedItems);
+    } else if (sortValue == "rating(a-z)") {
+      const sortedItems = [...filteredItem].sort((a, b) => b.rating - a.rating);
+      setfilteredItem(sortedItems);
+    } else if (sortValue == "rating(z-a)") {
+      const sortedItems = [...filteredItem].sort((a, b) => a.rating - b.rating);
+      setfilteredItem(sortedItems);
+    }
+  };
   useEffect(() => {
     setfilteredItem(ProductData);
   }, []);
   return (
     <div className="dark:bg-[#111827]">
       <div className="container pt-[150px]">
-        <div className="flex justify-end">
+        <div className="flex justify-end gap-4">
           {/* <select
             id="gender"
             name="gender"
@@ -42,6 +56,25 @@ function Clothes() {
               All
             </option>
           </select> */}
+          <Menu>
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+              Sort
+            </MenuButton>
+            <MenuList>
+              <MenuItem onClick={() => sortData("price(a-z)")}>
+                Price(A-Z)
+              </MenuItem>
+              <MenuItem onClick={() => sortData("price(z-a)")}>
+                Price(Z-A)
+              </MenuItem>
+              <MenuItem onClick={() => sortData("rating(a-z)")}>
+                rating(A-Z)
+              </MenuItem>
+              <MenuItem onClick={() => sortData("rating(z-a)")}>
+                rating(Z-A)
+              </MenuItem>
+            </MenuList>
+          </Menu>
           <Menu>
             <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
               Category

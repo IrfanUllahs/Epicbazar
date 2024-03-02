@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import Card from "../Card/Card";
 import ProductsData from "../../Data/ProductData";
 import { useState } from "react";
-import { FaStar } from "react-icons/fa6";
-import { IoMdArrowDropdown } from "react-icons/io";
+
 import { Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
@@ -19,7 +18,21 @@ function Electronics() {
         : ProductsData.filter((value) => value.category.name == category);
     setfilteredItem(filterValues);
   };
-
+  const sortData = (sortValue) => {
+    if (sortValue == "price(a-z)") {
+      const sortedItems = [...filteredItem].sort((a, b) => b.price - a.price);
+      setfilteredItem(sortedItems);
+    } else if (sortValue == "price(z-a)") {
+      const sortedItems = [...filteredItem].sort((a, b) => a.price - b.price);
+      setfilteredItem(sortedItems);
+    } else if (sortValue == "rating(a-z)") {
+      const sortedItems = [...filteredItem].sort((a, b) => b.rating - a.rating);
+      setfilteredItem(sortedItems);
+    } else if (sortValue == "rating(z-a)") {
+      const sortedItems = [...filteredItem].sort((a, b) => a.rating - b.rating);
+      setfilteredItem(sortedItems);
+    }
+  };
   useEffect(() => {
     setfilteredItem(ProductsData);
   }, []);
@@ -34,17 +47,16 @@ function Electronics() {
               Sort
             </MenuButton>
             <MenuList>
-              <MenuItem onClick={() => FiltereData("computer")}>
+              <MenuItem onClick={() => sortData("price(a-z)")}>
                 Price(A-Z)
               </MenuItem>
-              <MenuItem onClick={() => FiltereData("headphone")}>
+              <MenuItem onClick={() => sortData("price(z-a)")}>
                 Price(Z-A)
               </MenuItem>
-              <MenuItem onClick={() => FiltereData("other")}>
+              <MenuItem onClick={() => sortData("rating(a-z)")}>
                 rating(A-Z)
               </MenuItem>
-              <MenuItem onClick={() => FiltereData("all")}>
-                {" "}
+              <MenuItem onClick={() => sortData("rating(z-a)")}>
                 rating(Z-A)
               </MenuItem>
             </MenuList>
