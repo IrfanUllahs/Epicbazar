@@ -93,7 +93,7 @@ export default function Navbar() {
             <div className=" flex gap-4 items-center relative  ">
               {/* cart button is here */}
               <Link to="/cart ">
-                <div className="bg-secondary hidden rounded-full py-[8px] px-[22px] sm:flex justify-center items-center gap-2 text-white text-[15px] group cursor-pointer ">
+                <div className="bg-secondary hidden rounded-full py-[8px] px-[22px] sm:flex justify-center items-center gap-2 text-white text-[20px] group cursor-pointer group">
                   <div
                     className="flex
                    items-center justify-center relative"
@@ -102,12 +102,15 @@ export default function Navbar() {
                     <p className="absolute -top-3 bottom-0 left-[105%] text-red-950 text-[16px] rounded-full">
                       {count}
                     </p>
+                    <p className="absolute top-8 bg-gray-400 rounded-xl px-2 opacity-0 sm:group-hover:opacity-100 duration-500 ">
+                      cart
+                    </p>
                   </div>
                 </div>
               </Link>
               {/* dark mode button is here */}
               <div
-                className="hover:bg-slate-500 sm:block hidden rounded-sm p-1 group dark-hover:bg-blue-400  "
+                className="bg-slate-500 sm:block hidden rounded-sm p-1 group dark:bg-yellow-900 relative  "
                 onClick={() => setThemomde((preValue) => !preValue)}
               >
                 {themomde ? (
@@ -115,6 +118,9 @@ export default function Navbar() {
                 ) : (
                   <MdDarkMode className="text-[22px] cursor-pointer text-blue-400  " />
                 )}
+                <p className="absolute top-8 bg-gray-400 rounded-xl px-2 opacity-0 sm:group-hover:opacity-100 duration-500 ">
+                  themeMode
+                </p>
               </div>
 
               {/* this is the code for responsiv nev bar */}
