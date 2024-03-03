@@ -85,8 +85,15 @@ export default function Navbar() {
                 className="w-full h-full border-none focus:border-none focus:outline-none group-hover:text-secondary bg-white dark:bg-black sm:inline-block hidden  group-hover:inline-block "
                 onChange={(e) => setsearchQuery(e.target.value)}
               />
-              <Link to={"/search"}>
-                <FaSearch className="" onClick={searchItems} />
+              <Link to={searchQuery && searchQuery != "." ? `/search` : null}>
+                <FaSearch
+                  className={
+                    searchQuery && searchQuery != "."
+                      ? `cursor-pointer`
+                      : `cursor-not-allowed`
+                  }
+                  onClick={searchItems}
+                />
               </Link>
             </div>
             {/* right portion  */}
@@ -110,7 +117,7 @@ export default function Navbar() {
               </Link>
               {/* dark mode button is here */}
               <div
-className="bg-slate-500 sm:block hidden rounded-sm p-1 group dark:bg-yellow-900 relative  "
+                className="bg-slate-500 sm:block hidden rounded-sm p-1 group dark:bg-yellow-900 relative  "
                 onClick={() => setThemomde((preValue) => !preValue)}
               >
                 {themomde ? (
@@ -118,7 +125,7 @@ className="bg-slate-500 sm:block hidden rounded-sm p-1 group dark:bg-yellow-900 
                 ) : (
                   <MdDarkMode className="text-[22px] cursor-pointer text-blue-400  " />
                 )}
-                <p className="absolute top-8 bg-gray-400 rounded-xl px-2 opacity-0 sm:group-hover:opacity-100 duration-500 ">
+                <p className="absolute top-8 bg-gray-400 rounded-xl px-2 opacity-0 sm:group-hover:opacity-100 duration-500 text-[20px] right-[-60px] ">
                   themeMode
                 </p>
               </div>
