@@ -34,8 +34,8 @@ function AddtoCart() {
 
   return (
     <>
-      <div className="dark:bg-gray-900 dark:text-white ">
-        <div className="container py-[100px] border dark:border-white  flex flex-col gap-6 overflow-x-auto mt-[100px] ">
+      <div className="dark:bg-gray-900 dark:text-white relative ">
+        <div className="container py-[100px]   flex flex-col gap-6 overflow-x-auto mt-[100px] ">
           {CartItems.map((value) => (
             <CartProductCard
               value={value}
@@ -44,8 +44,35 @@ function AddtoCart() {
             />
           ))}
           {/* <CartProductCart value={CartItems[0]} /> */}
-          <p>{Total ? Total : ""}</p>
         </div>
+        {Total ? (
+          <div className=" h-[300px] w-[350px]  bg-secondary rounded-md p-2 flex flex-col justify-center items-start     gap-4  duration-500 mx-auto ">
+            <div className="w-[90%] text-[20px] flex flex-col gap-3 justify-center">
+              <p className="text-[30px] font-bold">Cart summary</p>
+              <div className="flex justify-between font-semibold text-gray-600 ">
+                <p>Total Product: </p>
+                <p>{CartItems.length}</p>
+              </div>
+              <div className="flex justify-between font-semibold text-gray-600 ">
+                <p>Delivery: </p>
+                <p>Rs. 123</p>
+              </div>
+              <div className="flex justify-between font-semibold text-gray-600 ">
+                <p>Tax: </p>
+                <p>5%</p>
+              </div>
+              <div className="flex justify-between font-semibold text-gray-600 ">
+                <p>Get Discount: </p>
+                <p>Rs. 25</p>
+              </div>
+              <div className="border-t border-black"></div>
+              <div className="flex justify-between font-semibold text-black ">
+                <p>Total amount: </p>
+                <p>Rs. {Total}</p>
+              </div>
+            </div>
+          </div>
+        ) : null}
       </div>
       <ToastContainer pauseOnFocusLoss={false} />;
     </>
